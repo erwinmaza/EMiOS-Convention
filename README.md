@@ -4,9 +4,14 @@ Taking a page from the Rails philosophy, avoiding string identifiers in my code.
 
 I've always thought using string identifiers was a bit fragile in Cocoa touch. Granted, I can't recall an instance where a mistyped identifier caused me grief, but the possibility always nagged at me.
 
+	In truth, I took to using #define macros to minimize typos in identifiers, but that still required coordination between the code and the nib/storyboards. I was not satisfied with that approach.
+
 So I decided to take a page from the Ruby-on-Rails framework philosophy of "convention over configuration" and see how many string identifiers I could purge from my code.
 
-The result: EMiOS+Convention, a collection of class extensions that break the Objective-C convention of extending one class per code file. Oh well.
+The result: EMiOS+Convention, a collection of class extensions that nevertheless break the Objective-C convention of extending one class per code file. 
+
+These are just some of the generic categories I've found useful in apps I've built since I started this experiment, so by no means is this list intended to be comprehensive. If you have or can think of others, I'll be glad to add them to this collection.
+
 
 ## Usage
 
