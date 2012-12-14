@@ -1,0 +1,76 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		AA87E3FC167B557800E60E16 /* EMiOS+Convention.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "EMiOS+Convention.h"; path = "../EMiOS+Convention.h"; sourceTree = "<group>"; };
+		AA87E3FD167B557800E60E16 /* EMiOS+Convention.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "EMiOS+Convention.m"; path = "../EMiOS+Convention.m"; sourceTree = "<group>"; };
+		AA87E3FE167B557900E60E16 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		AA87E3F3167B556600E60E16 = {
+			isa = PBXGroup;
+			children = (
+				AA87E3FC167B557800E60E16 /* EMiOS+Convention.h */,
+				AA87E3FD167B557800E60E16 /* EMiOS+Convention.m */,
+				AA87E3FE167B557900E60E16 /* README.md */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		AA87E3F5167B556600E60E16 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+			};
+			buildConfigurationList = AA87E3F8167B556600E60E16 /* Build configuration list for PBXProject "EMiOS+Convention" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AA87E3F3167B556600E60E16;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		AA87E3FA167B556600E60E16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		AA87E3FB167B556600E60E16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA87E3F8167B556600E60E16 /* Build configuration list for PBXProject "EMiOS+Convention" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA87E3FA167B556600E60E16 /* Debug */,
+				AA87E3FB167B556600E60E16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA87E3F5167B556600E60E16 /* Project object */;
+}

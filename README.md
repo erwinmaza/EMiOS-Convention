@@ -18,7 +18,8 @@ These are just some of the generic categories I've found useful in apps I've bui
 What follows are the rules you must follow to use each of these extensions:
 
 	NSEntityDescription:
-	+ (id)userEntityWithClass:(Class)class inContext:(NSManagedObjectContext*)context;
+	+ (id)entityWithClass:(Class)class inContext:(NSManagedObjectContext*)context;
+	+ (id)insertEntityOfClass:(Class)class intoContext:(NSManagedObjectContext*)context;
 
 * The NSManagedObject subclass name must match the entity name
 
@@ -40,7 +41,9 @@ What follows are the rules you must follow to use each of these extensions:
 ---
 	UITableView
 	- (void)registerNibWithClass:(Class)class;
+	- (void)registerClass:(Class)class;
 	- (id)dequeueCellWithClass:(Class)class;
+	- (id)dequeueCellWithClass:(Class)class forIndexPath:(NSIndexPath*)path;
 
 * The filename of the nib for the custom UITableViewCell must match the cell subclass name
 
@@ -48,6 +51,7 @@ What follows are the rules you must follow to use each of these extensions:
 ---
 	UICollectionView
 	- (void)registerNibWithClass:(Class)class;
+	- (void)registerClass:(Class)class;
 	- (id)dequeueCellWithClass:(Class)class forIndexPath:(NSIndexPath*)indexPath;
 
 * The filename of the nib for the custom UICollectionViewCell must match the cell subclass name

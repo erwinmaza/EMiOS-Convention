@@ -32,8 +32,12 @@
 
 @implementation NSEntityDescription (EMiOS_Convention)
 
-+ (id)userEntityWithClass:(Class)class inContext:(NSManagedObjectContext*)context {
++ (id)entityWithClass:(Class)class inContext:(NSManagedObjectContext*)context {
 	return [NSEntityDescription entityForName:NSStringFromClass(class) inManagedObjectContext:context];
+}
+
++ (id)insertEntityOfClass:(Class)class intoContext:(NSManagedObjectContext*)context {
+	return [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass(class) inManagedObjectContext:context];
 }
 
 @end
@@ -72,8 +76,16 @@
 	[self registerNib:[UINib nibWithNibName:NSStringFromClass(class) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:NSStringFromClass(class)];
 }
 
+- (void)registerClass:(Class)class {
+	[self registerClass:class forCellReuseIdentifier:NSStringFromClass(class)];
+}
+
 - (id)dequeueCellWithClass:(Class)class {
 	return [self dequeueReusableCellWithIdentifier:NSStringFromClass(class)];
+}
+
+- (id)dequeueCellWithClass:(Class)class forIndexPath:(NSIndexPath*)path{
+	return [self dequeueReusableCellWithIdentifier:NSStringFromClass(class) forIndexPath:path];
 }
 
 @end
@@ -84,6 +96,10 @@
 
 - (void)registerNibWithClass:(Class)class {
 	[self registerNib:[UINib nibWithNibName:NSStringFromClass(class) bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:NSStringFromClass(class)];
+}
+
+- (void)registerClass:(Class)class {
+	[self registerClass:class forCellWithReuseIdentifier:NSStringFromClass(class)];
 }
 
 - (id)dequeueCellWithClass:(Class)class forIndexPath:(NSIndexPath*)indexPath {

@@ -30,7 +30,8 @@
 
 @interface NSEntityDescription (EMiOS_Convention)
 
-	+ (id)userEntityWithClass:(Class)class inContext:(NSManagedObjectContext*)context;
+	+ (id)entityWithClass:(Class)class inContext:(NSManagedObjectContext*)context;
+	+ (id)insertEntityOfClass:(Class)class intoContext:(NSManagedObjectContext*)context;
 
 @end
 
@@ -49,7 +50,9 @@
 @interface UITableView (EMiOS_Convention)
 
 	- (void)registerNibWithClass:(Class)class;
+	- (void)registerClass:(Class)class;
 	- (id)dequeueCellWithClass:(Class)class;
+	- (id)dequeueCellWithClass:(Class)class forIndexPath:(NSIndexPath*)path;
 
 @end
 
@@ -57,6 +60,7 @@
 @interface UICollectionView (EMiOS_Convention)
 
 	- (void)registerNibWithClass:(Class)class;
+	- (void)registerClass:(Class)class;
 	- (id)dequeueCellWithClass:(Class)class forIndexPath:(NSIndexPath*)indexPath;
 
 @end
