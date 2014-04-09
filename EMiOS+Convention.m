@@ -80,6 +80,10 @@
 	[self registerClass:class forCellReuseIdentifier:NSStringFromClass(class)];
 }
 
+- (void)registerHeader:(Class)class {
+	[self registerClass:class forHeaderFooterViewReuseIdentifier:NSStringFromClass(class)];
+}
+
 - (id)dequeueCellWithClass:(Class)class {
 	return [self dequeueReusableCellWithIdentifier:NSStringFromClass(class)];
 }

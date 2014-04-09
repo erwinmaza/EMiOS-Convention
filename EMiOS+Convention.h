@@ -51,6 +51,7 @@
 
 	- (void)registerNibWithClass:(Class)class;
 	- (void)registerClass:(Class)class;
+	- (void)registerHeader:(Class)class;
 	- (id)dequeueCellWithClass:(Class)class;
 	- (id)dequeueCellWithClass:(Class)class forIndexPath:(NSIndexPath*)path;
 
