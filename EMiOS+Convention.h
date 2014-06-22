@@ -30,15 +30,15 @@
 
 @interface NSEntityDescription (EMiOS_Convention)
 
-	+ (id)entityWithClass:(Class)class inContext:(NSManagedObjectContext*)context;
-	+ (id)insertEntityOfClass:(Class)class intoContext:(NSManagedObjectContext*)context;
+	+ (id)entityWithClass:(Class)aClass inContext:(NSManagedObjectContext*)context;
+	+ (id)insertEntityOfClass:(Class)aClass intoContext:(NSManagedObjectContext*)context;
 
 @end
 
 
 @interface UIViewController (EMiOS_Convention)
 
-	- (id)storyboardControllerWithClass:(Class)class;
+	- (id)storyboardControllerWithClass:(Class)aClass;
 	- (id)initWithNib;
 	- (void)exit;
 	- (void)exitDoorNumber2;
@@ -49,26 +49,26 @@
 
 @interface UITableView (EMiOS_Convention)
 
-	- (void)registerNibWithClass:(Class)class;
-	- (void)registerClass:(Class)class;
-	- (void)registerHeader:(Class)class;
-	- (id)dequeueCellWithClass:(Class)class;
-	- (id)dequeueCellWithClass:(Class)class forIndexPath:(NSIndexPath*)path;
+	- (void)registerNibWithClass:(Class)aClass;
+	- (void)registerClass:(Class)aClass;
+	- (void)registerHeader:(Class)aClass;
+	- (id)dequeueCellWithClass:(Class)aClass;
+	- (id)dequeueCellWithClass:(Class)aClass forIndexPath:(NSIndexPath*)path;
 
 @end
 
 
 @interface UICollectionView (EMiOS_Convention)
 
-	- (void)registerNibWithClass:(Class)class;
-	- (void)registerHeaderNibWithClass:(Class)class;
-	- (void)registerFooterNibWithClass:(Class)class;
-	- (void)registerHeaderWithClass:(Class)class;
-	- (void)registerFooterWithClass:(Class)class;
-	- (void)registerClass:(Class)class;
-	- (id)dequeueCellWithClass:(Class)class forIndexPath:(NSIndexPath*)indexPath;
-	- (id)dequeueHeaderWithClass:(Class)class forIndexPath:(NSIndexPath*)indexPath;
-	- (id)dequeueFooterWithClass:(Class)class forIndexPath:(NSIndexPath*)indexPath;
+	- (void)registerNibWithClass:(Class)aClass;
+	- (void)registerHeaderNibWithClass:(Class)aClass;
+	- (void)registerFooterNibWithClass:(Class)aClass;
+	- (void)registerHeaderWithClass:(Class)aClass;
+	- (void)registerFooterWithClass:(Class)aClass;
+	- (void)registerClass:(Class)aClass;
+	- (id)dequeueCellWithClass:(Class)aClass forIndexPath:(NSIndexPath*)indexPath;
+	- (id)dequeueHeaderWithClass:(Class)aClass forIndexPath:(NSIndexPath*)indexPath;
+	- (id)dequeueFooterWithClass:(Class)aClass forIndexPath:(NSIndexPath*)indexPath;
 	- (UICollectionReusableView*)getFooterForPath:(NSIndexPath*)path;
 
 @end
